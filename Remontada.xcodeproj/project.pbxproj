@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8C5D109D25E5C5480023EE5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5D109C25E5C5480023EE5A /* AppDelegate.swift */; };
 		8C5D109F25E5C5480023EE5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5D109E25E5C5480023EE5A /* SceneDelegate.swift */; };
-		8C5D10A125E5C5480023EE5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5D10A025E5C5480023EE5A /* ViewController.swift */; };
 		8C5D10A425E5C5480023EE5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5D10A225E5C5480023EE5A /* Main.storyboard */; };
 		8C5D10A725E5C5480023EE5A /* Remontada.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C5D10A525E5C5480023EE5A /* Remontada.xcdatamodeld */; };
 		8C5D10A925E5C5490023EE5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C5D10A825E5C5490023EE5A /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 		8C5D109925E5C5480023EE5A /* Remontada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remontada.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5D109C25E5C5480023EE5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5D109E25E5C5480023EE5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8C5D10A025E5C5480023EE5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8C5D10A325E5C5480023EE5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C5D10A625E5C5480023EE5A /* Remontada.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Remontada.xcdatamodel; sourceTree = "<group>"; };
 		8C5D10A825E5C5490023EE5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +37,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C21B5EE25E5CCD300C9D31E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8C21B5EF25E5CCE100C9D31E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8C21B5F025E5CCEA00C9D31E /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		8C21B5F125E5CD0E00C9D31E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8C5D10A525E5C5480023EE5A /* Remontada.xcdatamodeld */,
+				8C5D109E25E5C5480023EE5A /* SceneDelegate.swift */,
+				8C5D109C25E5C5480023EE5A /* AppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8C21B5F225E5CD1A00C9D31E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C5D10A825E5C5490023EE5A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8C21B5F325E5CD7C00C9D31E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				8C5D10AD25E5C5490023EE5A /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		8C21B5F925E5D57400C9D31E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8C5D10A225E5C5480023EE5A /* Main.storyboard */,
+				8C5D10AA25E5C5490023EE5A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		8C5D109025E5C5480023EE5A = {
 			isa = PBXGroup;
 			children = (
@@ -46,6 +100,7 @@
 				8C5D109A25E5C5480023EE5A /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		8C5D109A25E5C5480023EE5A /* Products */ = {
 			isa = PBXGroup;
@@ -58,14 +113,13 @@
 		8C5D109B25E5C5480023EE5A /* Remontada */ = {
 			isa = PBXGroup;
 			children = (
-				8C5D109C25E5C5480023EE5A /* AppDelegate.swift */,
-				8C5D109E25E5C5480023EE5A /* SceneDelegate.swift */,
-				8C5D10A025E5C5480023EE5A /* ViewController.swift */,
-				8C5D10A225E5C5480023EE5A /* Main.storyboard */,
-				8C5D10A825E5C5490023EE5A /* Assets.xcassets */,
-				8C5D10AA25E5C5490023EE5A /* LaunchScreen.storyboard */,
-				8C5D10AD25E5C5490023EE5A /* Info.plist */,
-				8C5D10A525E5C5480023EE5A /* Remontada.xcdatamodeld */,
+				8C21B5F925E5D57400C9D31E /* Storyboards */,
+				8C21B5F325E5CD7C00C9D31E /* Configuration */,
+				8C21B5F225E5CD1A00C9D31E /* Resources */,
+				8C21B5F125E5CD0E00C9D31E /* Core */,
+				8C21B5F025E5CCEA00C9D31E /* Presenters */,
+				8C21B5EF25E5CCE100C9D31E /* Views */,
+				8C21B5EE25E5CCD300C9D31E /* Models */,
 			);
 			path = Remontada;
 			sourceTree = "<group>";
@@ -140,7 +194,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C5D10A125E5C5480023EE5A /* ViewController.swift in Sources */,
 				8C5D10A725E5C5480023EE5A /* Remontada.xcdatamodeld in Sources */,
 				8C5D109D25E5C5480023EE5A /* AppDelegate.swift in Sources */,
 				8C5D109F25E5C5480023EE5A /* SceneDelegate.swift in Sources */,
@@ -292,7 +345,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GCQQMG9SV;
-				INFOPLIST_FILE = Remontada/Info.plist;
+				INFOPLIST_FILE = Remontada/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +364,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GCQQMG9SV;
-				INFOPLIST_FILE = Remontada/Info.plist;
+				INFOPLIST_FILE = Remontada/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
