@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E9B93A04-F1FE-4308-866D-F6ED09420031"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EAB9FB35-E378-4A79-9973-60C4737342C7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Remontada/Presenters/SportsPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getSports()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EAB9FB35-E378-4A79-9973-60C4737342C7 - 6d0dc95318301723"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Remontada.SportsPresenter.(getSports in _65AA5DE56CD3C73B0B0219065287CE4F)() -&gt; ()"
+                  moduleName = "Remontada"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/me/Desktop/Remontada/Remontada/Presenters/SportsPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "245">
+               </Location>
+               <Location
+                  uuid = "EAB9FB35-E378-4A79-9973-60C4737342C7 - ddb8fdfb5d3c9085"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Swift.Array&lt;Remontada.Sport&gt;&gt;, __C.NSError&gt;) -&gt; () in Remontada.SportsPresenter.(getSports in _65AA5DE56CD3C73B0B0219065287CE4F)() -&gt; ()"
+                  moduleName = "Remontada"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/me/Desktop/Remontada/Remontada/Presenters/SportsPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "300">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E32A6FF6-A903-46A4-A99F-828FD519C102"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Remontada/Presenters/SportsPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "getSports()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "719C01B3-9875-4FC5-BF7A-E779446FA783"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Remontada/Presenters/SportsPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "getSports()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

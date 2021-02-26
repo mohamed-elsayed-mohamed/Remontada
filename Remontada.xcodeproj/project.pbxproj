@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,23 @@
 		8C5D10A725E5C5480023EE5A /* Remontada.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C5D10A525E5C5480023EE5A /* Remontada.xcdatamodeld */; };
 		8C5D10A925E5C5490023EE5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C5D10A825E5C5490023EE5A /* Assets.xcassets */; };
 		8C5D10AC25E5C5490023EE5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5D10AA25E5C5490023EE5A /* LaunchScreen.storyboard */; };
+		8C7D1E2825E85F1400CE2876 /* APIURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D1E2725E85F1400CE2876 /* APIURLs.swift */; };
+		8C7D1E2D25E8626900CE2876 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D1E2C25E8626900CE2876 /* BaseAPI.swift */; };
+		8C7D1E3225E8743700CE2876 /* SportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D1E3125E8743700CE2876 /* SportsVC.swift */; };
+		8C7D1E3525E8756000CE2876 /* SportsVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D1E3425E8756000CE2876 /* SportsVC+CollectionView.swift */; };
+		8C7D1E3B25E875FD00CE2876 /* SportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D1E3925E875FD00CE2876 /* SportCell.swift */; };
+		8C7D1E3C25E875FD00CE2876 /* SportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C7D1E3A25E875FD00CE2876 /* SportCell.xib */; };
+		8C7D1E4225E8773D00CE2876 /* SportCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D1E4125E8773D00CE2876 /* SportCellProtocol.swift */; };
+		8C7D1E4625E87D5100CE2876 /* SportsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D1E4525E87D5100CE2876 /* SportsPresenter.swift */; };
+		8C7D1E4925E87D9D00CE2876 /* SportsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D1E4825E87D9D00CE2876 /* SportsModel.swift */; };
+		8C7D1E4D25E87E8700CE2876 /* SportsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D1E4C25E87E8700CE2876 /* SportsViewProtocol.swift */; };
+		8C7D1E5225E889E600CE2876 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D1E5125E889E600CE2876 /* Sport.swift */; };
+		EFCA5BBFFFB887879DFC0B44 /* Pods_Remontada.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C42434F8850F7FA1A6C666 /* Pods_Remontada.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		230F15948B28F4581AE64DFE /* Pods-Remontada.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remontada.debug.xcconfig"; path = "Target Support Files/Pods-Remontada/Pods-Remontada.debug.xcconfig"; sourceTree = "<group>"; };
+		85938B44B53B4FFCF3CE6CF7 /* Pods-Remontada.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remontada.release.xcconfig"; path = "Target Support Files/Pods-Remontada/Pods-Remontada.release.xcconfig"; sourceTree = "<group>"; };
 		8C5D109925E5C5480023EE5A /* Remontada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remontada.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5D109C25E5C5480023EE5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5D109E25E5C5480023EE5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +38,18 @@
 		8C5D10A825E5C5490023EE5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C5D10AB25E5C5490023EE5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C5D10AD25E5C5490023EE5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C7D1E2725E85F1400CE2876 /* APIURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIURLs.swift; sourceTree = "<group>"; };
+		8C7D1E2C25E8626900CE2876 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		8C7D1E3125E8743700CE2876 /* SportsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsVC.swift; sourceTree = "<group>"; };
+		8C7D1E3425E8756000CE2876 /* SportsVC+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SportsVC+CollectionView.swift"; sourceTree = "<group>"; };
+		8C7D1E3925E875FD00CE2876 /* SportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCell.swift; sourceTree = "<group>"; };
+		8C7D1E3A25E875FD00CE2876 /* SportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SportCell.xib; sourceTree = "<group>"; };
+		8C7D1E4125E8773D00CE2876 /* SportCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCellProtocol.swift; sourceTree = "<group>"; };
+		8C7D1E4525E87D5100CE2876 /* SportsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsPresenter.swift; sourceTree = "<group>"; };
+		8C7D1E4825E87D9D00CE2876 /* SportsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsModel.swift; sourceTree = "<group>"; };
+		8C7D1E4C25E87E8700CE2876 /* SportsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewProtocol.swift; sourceTree = "<group>"; };
+		8C7D1E5125E889E600CE2876 /* Sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
+		E9C42434F8850F7FA1A6C666 /* Pods_Remontada.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Remontada.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,15 +57,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCA5BBFFFB887879DFC0B44 /* Pods_Remontada.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71C1EFD2CB23AACC5CE9F61C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				230F15948B28F4581AE64DFE /* Pods-Remontada.debug.xcconfig */,
+				85938B44B53B4FFCF3CE6CF7 /* Pods-Remontada.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8C21B5EE25E5CCD300C9D31E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8C21B5FE25E5E6B600C9D31E /* Helpers */,
+				8C7D1E4825E87D9D00CE2876 /* SportsModel.swift */,
+				8C7D1E5125E889E600CE2876 /* Sport.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -47,6 +86,7 @@
 		8C21B5EF25E5CCE100C9D31E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8C7D1E2F25E870D700CE2876 /* Sports */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -54,6 +94,7 @@
 		8C21B5F025E5CCEA00C9D31E /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				8C7D1E4525E87D5100CE2876 /* SportsPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -93,11 +134,43 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		8C21B5FB25E5E67B00C9D31E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8C21B5FD25E5E69300C9D31E /* Remote */,
+				8C21B5FC25E5E68500C9D31E /* Local */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8C21B5FC25E5E68500C9D31E /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		8C21B5FD25E5E69300C9D31E /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		8C21B5FE25E5E6B600C9D31E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		8C5D109025E5C5480023EE5A = {
 			isa = PBXGroup;
 			children = (
 				8C5D109B25E5C5480023EE5A /* Remontada */,
 				8C5D109A25E5C5480023EE5A /* Products */,
+				71C1EFD2CB23AACC5CE9F61C /* Pods */,
+				907F9F28BC5B6DA1EB907573 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 0;
@@ -113,6 +186,9 @@
 		8C5D109B25E5C5480023EE5A /* Remontada */ = {
 			isa = PBXGroup;
 			children = (
+				8C7D1E3F25E8771400CE2876 /* Protocols */,
+				8C7D1E2625E85EC200CE2876 /* Networking */,
+				8C21B5FB25E5E67B00C9D31E /* Data */,
 				8C21B5F925E5D57400C9D31E /* Storyboards */,
 				8C21B5F325E5CD7C00C9D31E /* Configuration */,
 				8C21B5F225E5CD1A00C9D31E /* Resources */,
@@ -124,6 +200,67 @@
 			path = Remontada;
 			sourceTree = "<group>";
 		};
+		8C7D1E2625E85EC200CE2876 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8C7D1E2725E85F1400CE2876 /* APIURLs.swift */,
+				8C7D1E2C25E8626900CE2876 /* BaseAPI.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8C7D1E2F25E870D700CE2876 /* Sports */ = {
+			isa = PBXGroup;
+			children = (
+				8C7D1E3725E875C700CE2876 /* Cells */,
+				8C7D1E3125E8743700CE2876 /* SportsVC.swift */,
+				8C7D1E3425E8756000CE2876 /* SportsVC+CollectionView.swift */,
+			);
+			path = Sports;
+			sourceTree = "<group>";
+		};
+		8C7D1E3725E875C700CE2876 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8C7D1E3825E875D100CE2876 /* SportCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8C7D1E3825E875D100CE2876 /* SportCell */ = {
+			isa = PBXGroup;
+			children = (
+				8C7D1E3925E875FD00CE2876 /* SportCell.swift */,
+				8C7D1E3A25E875FD00CE2876 /* SportCell.xib */,
+			);
+			path = SportCell;
+			sourceTree = "<group>";
+		};
+		8C7D1E3F25E8771400CE2876 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8C7D1E4025E8772500CE2876 /* Sports */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8C7D1E4025E8772500CE2876 /* Sports */ = {
+			isa = PBXGroup;
+			children = (
+				8C7D1E4125E8773D00CE2876 /* SportCellProtocol.swift */,
+				8C7D1E4C25E87E8700CE2876 /* SportsViewProtocol.swift */,
+			);
+			path = Sports;
+			sourceTree = "<group>";
+		};
+		907F9F28BC5B6DA1EB907573 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9C42434F8850F7FA1A6C666 /* Pods_Remontada.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C5D10B025E5C5490023EE5A /* Build configuration list for PBXNativeTarget "Remontada" */;
 			buildPhases = (
+				5F3F759D1555245FE95AB13D /* [CP] Check Pods Manifest.lock */,
 				8C5D109525E5C5480023EE5A /* Sources */,
 				8C5D109625E5C5480023EE5A /* Frameworks */,
 				8C5D109725E5C5480023EE5A /* Resources */,
+				D6FA3495B717F47EB6CF1D83 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,11 +322,54 @@
 			files = (
 				8C5D10AC25E5C5490023EE5A /* LaunchScreen.storyboard in Resources */,
 				8C5D10A925E5C5490023EE5A /* Assets.xcassets in Resources */,
+				8C7D1E3C25E875FD00CE2876 /* SportCell.xib in Resources */,
 				8C5D10A425E5C5480023EE5A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F3F759D1555245FE95AB13D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Remontada-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6FA3495B717F47EB6CF1D83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Remontada/Pods-Remontada-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Remontada/Pods-Remontada-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Remontada/Pods-Remontada-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C5D109525E5C5480023EE5A /* Sources */ = {
@@ -195,8 +377,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C5D10A725E5C5480023EE5A /* Remontada.xcdatamodeld in Sources */,
+				8C7D1E4925E87D9D00CE2876 /* SportsModel.swift in Sources */,
 				8C5D109D25E5C5480023EE5A /* AppDelegate.swift in Sources */,
+				8C7D1E3B25E875FD00CE2876 /* SportCell.swift in Sources */,
+				8C7D1E4225E8773D00CE2876 /* SportCellProtocol.swift in Sources */,
 				8C5D109F25E5C5480023EE5A /* SceneDelegate.swift in Sources */,
+				8C7D1E5225E889E600CE2876 /* Sport.swift in Sources */,
+				8C7D1E3525E8756000CE2876 /* SportsVC+CollectionView.swift in Sources */,
+				8C7D1E4D25E87E8700CE2876 /* SportsViewProtocol.swift in Sources */,
+				8C7D1E4625E87D5100CE2876 /* SportsPresenter.swift in Sources */,
+				8C7D1E2825E85F1400CE2876 /* APIURLs.swift in Sources */,
+				8C7D1E2D25E8626900CE2876 /* BaseAPI.swift in Sources */,
+				8C7D1E3225E8743700CE2876 /* SportsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +532,7 @@
 		};
 		8C5D10B125E5C5490023EE5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 230F15948B28F4581AE64DFE /* Pods-Remontada.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -359,6 +552,7 @@
 		};
 		8C5D10B225E5C5490023EE5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85938B44B53B4FFCF3CE6CF7 /* Pods-Remontada.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
