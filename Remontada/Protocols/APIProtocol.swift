@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SportsViewProtocol: class {
+protocol APIProtocol: class {
     func showIndicator()
     func hideIndicator()
     func fetchingDataSuccess()

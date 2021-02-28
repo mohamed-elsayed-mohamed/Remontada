@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SportsVC: UIViewController, SportsViewProtocol {
+class SportsVC: UIViewController, APIProtocol {
 
     var presenter: SportsPresenter!
     
