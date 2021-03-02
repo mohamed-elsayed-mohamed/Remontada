@@ -36,6 +36,6 @@ class LeagesVC: UIViewController, APIProtocol{
     }
     
     func showError(error: String) {
-        print(error)
+        // print(error)
     }
 }

@@ -18,7 +18,7 @@ class TeamsPresenter: CollectionsProtocol {
         getTeams(leagueID: leagueID)
     }
     
-    func getTeams(leagueID: String) {
+    private func getTeams(leagueID: String) {
         dataAPISource.fetchData(url: APIURLs.teamsInLeagueID + leagueID, responseClass: TeamsModel.self, completion: { (response) in
             self.teamsView?.showIndicator()
             switch response {
@@ -45,9 +45,14 @@ class TeamsPresenter: CollectionsProtocol {
     func insertCell(cell: TeamCell, index: Int) {
         let team: Team = self.teams[0].teams[index]!
         cell.displayImg(imgURL: team.imgURL)
+        cell.setTeamID(teamID: team.ID!)
     }
     
     func selectCell(index: Int) {
         
+    }
+    
+    func getTeamID(index: Int) -> String{
+        return teams[0].teams[index]!.ID!
     }
 }

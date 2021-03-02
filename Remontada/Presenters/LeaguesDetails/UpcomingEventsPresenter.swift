@@ -43,6 +43,9 @@ class UpcomingEventsPresenter: CollectionsProtocol {
         for eventIndex in 0..<self.upcomingEvents.count {
             let event = self.upcomingEvents[eventIndex]
             for index in 0..<2 {
+                if(event.event?.teamBID == nil){
+                    break
+                }
                 var teamID: String?
                 if(index == 0){
                     teamID = event.event?.teamAID

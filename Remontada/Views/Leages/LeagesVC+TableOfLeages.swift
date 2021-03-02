@@ -34,7 +34,6 @@ extension LeagesVC: UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.presenter.selectCell(index: indexPath.row)
         let detailsVC = self.storyboard!.instantiateViewController(withIdentifier: ViewsIDs.leagueDetails) as! DetailsVC
-        //let detailsVC = DetailsVC(leagueID: self.presenter.getLeagueID(index: indexPath.row))
         
         DetailsVC.leagueID = self.presenter.getLeagueID(index: indexPath.row)
         let navController = UINavigationController(rootViewController: detailsVC)

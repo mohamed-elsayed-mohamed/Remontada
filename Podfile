@@ -7,6 +7,7 @@ target 'Remontada' do
 
   pod 'Alamofire', '~> 5.2'
   pod 'SDWebImage', '~> 5.0'
+  pod 'YouTubePlayer'
   # Pods for Remontada
 
 end

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LeageCellProtocol: SportCellProtocol {
-    
+    func setVideoID(youtubeVideoID: String?)
 }

@@ -9,4 +9,6 @@ import Foundation
 
 enum ViewsIDs{
     static let leagueDetails = "DetailsVC"
+    static let youtube = "YoutubeVC"
+    static let teamDetails = "teamDetailsVC"
 }

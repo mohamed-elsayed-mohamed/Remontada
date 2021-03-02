@@ -11,6 +11,8 @@ class LeageCell: UITableViewCell, LeageCellProtocol {
     
     @IBOutlet weak var leageImg: UIImageView!
     @IBOutlet weak var leageName: UILabel!
+    @IBOutlet weak var btnYouTube: UIButton!
+    private var youtubeURL: String?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +23,13 @@ class LeageCell: UITableViewCell, LeageCellProtocol {
     }
     
     @IBAction func leageVideo(_ sender: Any) {
-
+        let currentView: UIViewController = self.window!.rootViewController!
+        
+        let youtubeView = currentView.storyboard!.instantiateViewController(withIdentifier: ViewsIDs.youtube) as! YoutubeVC
+        
+        youtubeView.setVideoID(videoID: youtubeURL!)
+        let navController = UINavigationController(rootViewController: youtubeView)
+        currentView.present(navController, animated:true, completion: nil)
     }
     
     func displayName(name: String) {
@@ -31,5 +39,10 @@ class LeageCell: UITableViewCell, LeageCellProtocol {
     func displayImage(image: String) {
         self.leageImg.layer.cornerRadius = self.leageImg.frame.size.width/2
         self.leageImg.sd_setImage(with: URL(string: image), placeholderImage: UIImage(named: "placeholder.png"))
+    }
+    
+    func setVideoID(youtubeVideoID: String?) {
+        self.btnYouTube.isHidden = false
+        self.youtubeURL = youtubeVideoID
     }
 }

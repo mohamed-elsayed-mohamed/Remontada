@@ -29,31 +29,32 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q43-f1-zHl">
-                        <rect key="frame" x="293" y="73" width="22" height="22"/>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q43-f1-zHl">
+                        <rect key="frame" x="285" y="65.5" width="30" height="29"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="22" id="O4Q-ZL-nSL"/>
-                            <constraint firstAttribute="height" constant="22" id="UhE-S8-kdD"/>
+                            <constraint firstAttribute="width" constant="30" id="dC1-0Z-aqR"/>
+                            <constraint firstAttribute="height" constant="30" id="sFh-8M-xAZ"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                        <state key="normal" image="video.circle.fill" catalog="system"/>
+                        <state key="normal" backgroundImage="video.circle.fill" catalog="system"/>
                         <connections>
                             <action selector="leageVideo:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="G0a-aT-YrO"/>
                         </connections>
                     </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="q43-f1-zHl" secondAttribute="trailing" constant="5" id="9pF-Jc-Y4m"/>
                     <constraint firstItem="6PD-rE-jTz" firstAttribute="leading" secondItem="g0N-43-WS6" secondAttribute="trailing" constant="5" id="CtM-q6-PcU"/>
                     <constraint firstAttribute="trailing" secondItem="6PD-rE-jTz" secondAttribute="trailing" constant="5" id="O3c-fQ-c5G"/>
                     <constraint firstItem="g0N-43-WS6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eNI-NB-Sfs"/>
-                    <constraint firstAttribute="bottom" secondItem="q43-f1-zHl" secondAttribute="bottom" constant="5" id="esr-Pk-mxw"/>
+                    <constraint firstAttribute="bottom" secondItem="q43-f1-zHl" secondAttribute="bottom" constant="5" id="hlc-j4-Yno"/>
                     <constraint firstItem="6PD-rE-jTz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="j2j-7r-HuF"/>
                     <constraint firstItem="g0N-43-WS6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="n6A-vY-YSU"/>
-                    <constraint firstAttribute="trailing" secondItem="q43-f1-zHl" secondAttribute="trailing" constant="5" id="vqo-Yp-TxT"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="btnYouTube" destination="q43-f1-zHl" id="Ohg-47-UmV"/>
                 <outlet property="leageImg" destination="g0N-43-WS6" id="Dvf-Ob-Y2y"/>
                 <outlet property="leageName" destination="6PD-rE-jTz" id="lFW-AW-cu2"/>
             </connections>

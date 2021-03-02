@@ -9,5 +9,5 @@ import Foundation
 
 protocol TeamCellProtocol {
     func displayImg(imgURL: String?)
-    func navigateWithTeamData(team: Team)
+    func navigateToTeamsView()
 }
