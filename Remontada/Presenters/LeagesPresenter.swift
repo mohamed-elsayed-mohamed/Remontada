@@ -12,11 +12,14 @@ class LeagesPresenter: CollectionsProtocol {
     
     private weak var leagesView: APIProtocol!
     private let dataAPISource = BaseAPI()
-    private var leages = [LeageModel]()
+    internal var leages = [LeageModel]()
+    
+    internal var dataModel: DataModel?
     
     init(leagesView: APIProtocol, sportName: String) {
         self.leagesView = leagesView
         getLeages(sportName: sportName)
+        self.dataModel = DataModel()
     }
     
     private func getLeages(sportName: String) {
@@ -48,8 +51,14 @@ class LeagesPresenter: CollectionsProtocol {
                 case .success(let moreInfo):
                     guard let moreInfo = moreInfo?.leagues else { return }
                     self.leages[index].moreInfo = moreInfo[0]
-                    self.getYouTubeID(youTubeURL: moreInfo[0].youtube!, index: index)
-
+                    if(moreInfo[0].youtube != nil){
+                        self.getYouTubeID(youTubeURL: moreInfo[0].youtube!, index: index)
+                    }
+                    
+                    if(index == self.leages.count-1){
+                        self.leagesView?.fetchingDataSuccess()
+                        self.leagesView?.hideIndicator()
+                    }
                 case .failure:
                     self.leagesView?.showError(error: "Error While featching more info data")
                 }
@@ -108,16 +117,20 @@ class LeagesPresenter: CollectionsProtocol {
                     self.leagesView?.showError(error: "Error While featching YouTubeInfo data")
                 }
                 
+                /*
                 if(index == self.leages.count-1){
                     self.leagesView?.fetchingDataSuccess()
                     self.leagesView?.hideIndicator()
                 }
+                */
             })
         }else{
+            /*
             if(index == self.leages.count-1){
                 self.leagesView?.fetchingDataSuccess()
                 self.leagesView?.hideIndicator()
             }
+            */
         }
     }
 }

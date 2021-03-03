@@ -56,11 +56,4 @@ extension TeamsCell: UICollectionViewDelegate, UICollectionViewDataSource{
         presenter.insertCell(cell: cell, index: indexPath.row)
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // presenter.selectCell(index: indexPath.row)
-        
-
-    }
-
 }

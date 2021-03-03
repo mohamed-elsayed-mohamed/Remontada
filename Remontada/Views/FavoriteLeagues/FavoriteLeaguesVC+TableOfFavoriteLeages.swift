@@ -1,21 +1,19 @@
 //
-//  LeagesVC+TableOfLeages.swift
+//  FavoriteLeaguesVC+TableOfFavoriteLeages.swift
 //  Remontada
 //
-//  Created by Mohamed Elsayed on 26/02/2021.
+//  Created by Mohamed Elsayed on 03/03/2021.
 //
 
+import Foundation
 import UIKit
 
-extension LeagesVC: UITableViewDelegate{
+extension FavoriteLeaguesVC: UITableViewDelegate, UITableViewDataSource{
     func setupTableView() {
-        leagesTableView.delegate = self
-        leagesTableView.dataSource = self
-        leagesTableView.register(UINib(nibName: CellsIDs.leagues, bundle: nil), forCellReuseIdentifier: CellsIDs.leagues)
+        myFavoriteLeaguesTableView.delegate = self
+        myFavoriteLeaguesTableView.dataSource = self
+        myFavoriteLeaguesTableView.register(UINib(nibName: CellsIDs.leagues, bundle: nil), forCellReuseIdentifier: CellsIDs.leagues)
     }
-}
-
-extension LeagesVC: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.getCellsCount()
@@ -36,7 +34,6 @@ extension LeagesVC: UITableViewDataSource{
         let detailsVC = self.storyboard!.instantiateViewController(withIdentifier: ViewsIDs.leagueDetails) as! DetailsVC
         
         DetailsVC.leagueID = self.presenter.getLeagueID(index: indexPath.row)
-        detailsVC.setPresenter_Index(presenter: self.presenter, index: indexPath.row)
         let navController = UINavigationController(rootViewController: detailsVC)
         self.present(navController, animated:true, completion: nil)
     }

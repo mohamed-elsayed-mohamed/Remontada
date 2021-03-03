@@ -308,14 +308,37 @@
         <!--Favorite-->
         <scene sceneID="BHp-no-ck1">
             <objects>
-                <viewController id="R9q-Oo-Xb6" sceneMemberID="viewController">
+                <viewController id="R9q-Oo-Xb6" customClass="FavoriteLeaguesVC" customModule="Remontada" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QAO-Gi-mn0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Leagues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3z-fw-hQa">
+                                <rect key="frame" x="126.5" y="54" width="161" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="URR-xZ-flB">
+                                <rect key="frame" x="0.0" y="91" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9Aj-jr-5tt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="C3z-fw-hQa" firstAttribute="centerX" secondItem="QAO-Gi-mn0" secondAttribute="centerX" id="SzI-TT-pND"/>
+                            <constraint firstItem="9Aj-jr-5tt" firstAttribute="bottom" secondItem="URR-xZ-flB" secondAttribute="bottom" id="cON-cN-2LF"/>
+                            <constraint firstItem="URR-xZ-flB" firstAttribute="leading" secondItem="9Aj-jr-5tt" secondAttribute="leading" id="ppJ-tT-V6W"/>
+                            <constraint firstItem="C3z-fw-hQa" firstAttribute="top" secondItem="9Aj-jr-5tt" secondAttribute="top" constant="10" id="xrL-DI-5od"/>
+                            <constraint firstItem="9Aj-jr-5tt" firstAttribute="trailing" secondItem="URR-xZ-flB" secondAttribute="trailing" id="zdS-sn-mlM"/>
+                            <constraint firstItem="URR-xZ-flB" firstAttribute="top" secondItem="C3z-fw-hQa" secondAttribute="bottom" constant="10" id="zfT-or-TfJ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorite" selectedImage="heart.fill" catalog="system" id="HLx-lL-XbT"/>
+                    <connections>
+                        <outlet property="myFavoriteLeaguesTableView" destination="URR-xZ-flB" id="wZU-5r-0h5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4b-Co-Lxo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

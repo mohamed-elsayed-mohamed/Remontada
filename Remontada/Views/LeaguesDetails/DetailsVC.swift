@@ -14,10 +14,24 @@ class DetailsVC: UIViewController {
     
     private var isFavorite: Bool?
     public static var leagueID: String?
+    private var leaguesPresenter: LeagesPresenter?
+    private var leagueIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.isFavorite = true
+        
+        if(leaguesPresenter == nil){
+            self.favoritebtn.isHidden = true
+        }else{
+            if(leaguesPresenter?.isFavorite(leagueID: DetailsVC.leagueID!) == true){
+                self.isFavorite = true
+                favoritebtn.setBackgroundImage(UIImage(systemName: "heart.fill"), for: .normal)
+            }else{
+                self.isFavorite = false
+                favoritebtn.setBackgroundImage(UIImage(systemName: "heart"), for: .normal)
+            }
+        }
+        
         setupMyTableView()
     }
     
@@ -25,12 +39,24 @@ class DetailsVC: UIViewController {
         var imageName: String = "heart.fill"
         if(isFavorite!){
             imageName = "heart"
+            
+            let res = self.leaguesPresenter?.deleteByID(leagueID: DetailsVC.leagueID!)
+            print("Delete Res: \(res!)")
+        }else{
+            let res = self.leaguesPresenter?.addFavorite(index: leagueIndex!)
+            print("Adding Res: \(res!)")
         }
         
         isFavorite = !isFavorite!
         
         favoritebtn.setBackgroundImage(UIImage(systemName: imageName), for: .normal)
     }
+    
+    func setPresenter_Index(presenter: LeagesPresenter, index: Int) {
+        self.leaguesPresenter = presenter
+        self.leagueIndex = index
+    }
+    
 }
 
 extension DetailsVC: UITableViewDelegate, UITableViewDataSource{
