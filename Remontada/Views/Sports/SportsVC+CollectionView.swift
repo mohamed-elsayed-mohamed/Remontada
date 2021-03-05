@@ -33,3 +33,14 @@ extension SportsVC: UICollectionViewDataSource{
         self.navigationController?.pushViewController(leagesView, animated: true)
     }
 }
+
+extension SportsVC: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.bounds.width/2
+        let height = width - 50
+        
+        return CGSize(width: width, height: height)
+    }
+}
+
+

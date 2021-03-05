@@ -17,8 +17,13 @@ class SportCell: UICollectionViewCell, SportCellProtocol {
         super.awakeFromNib()
     }
     
-    func displayImage(image: String) {
-        self.sportImg.sd_setImage(with: URL(string: image), placeholderImage: UIImage(named: "placeholder.png"))
+    func displayImage(image: String?) {
+        if(image != nil){
+            self.sportImg.sd_setImage(with: URL(string: image!), placeholderImage: UIImage(named: "sports.jpg"))
+        }else{
+            self.sportImg.image = UIImage(named: "sports.jpg")
+        }
+        
     }
     
     func displayName(name: String) {

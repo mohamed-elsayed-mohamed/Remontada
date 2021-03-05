@@ -8,7 +8,7 @@
 import UIKit
 
 class LeageModel: NSObject {
-    public var info: LeageBaseInfo!
-    public var moreInfo: LeageMoreInfo!
+    public var info: LeageBaseInfo = LeageBaseInfo()
+    public var moreInfo: LeageMoreInfo = LeageMoreInfo()
     public var youTubeID: String?
 }

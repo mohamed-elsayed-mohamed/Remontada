@@ -4,6 +4,7 @@
 //
 //  Created by Mohamed Elsayed on 27/02/2021.
 //
+import Foundation
 
 class LastEventsPresenter: CollectionsProtocol {
     
@@ -12,12 +13,11 @@ class LastEventsPresenter: CollectionsProtocol {
     private var upcomingEvents = [UpcomingModel]()
     
     
-    init(upcommingView: APIProtocol, leagueID: String) {
+    init(upcommingView: APIProtocol) {
         self.upcommingView = upcommingView
-        getEvents(leageID: leagueID)
     }
     
-    private func getEvents(leageID: String) {
+    func getEvents(leageID: String) {
         upcommingView?.showIndicator()
         dataAPISource.fetchData(url: APIURLs.eventsByLeagueID + leageID, responseClass: Events.self, completion: { (response) in
             switch response {
@@ -31,8 +31,13 @@ class LastEventsPresenter: CollectionsProtocol {
                 }
                 
                 self.getTeamsInfo()
-            case .failure:
-                self.upcommingView?.showError(error: "Error While featching base info data")
+            case .failure(let error):
+                let errorMessage = error.userInfo[NSLocalizedDescriptionKey]! as! String
+                if error.code == -1 {
+                    self.upcommingView?.showInternetMessage(message: errorMessage)
+                }else{
+                    self.upcommingView?.showError(error: errorMessage)
+                }
             }
         })
     }
@@ -80,12 +85,19 @@ class LastEventsPresenter: CollectionsProtocol {
     }
     
     func inserCell(cell: EventCell, index: Int) {
-        let upcomingEvent: UpcomingModel = upcomingEvents[index]
-        cell.displayNames(teamA: upcomingEvent.event!.teamA!, teamB: upcomingEvent.event!.teamB!)
-        cell.displayDateTime(date: upcomingEvent.event!.date, time: upcomingEvent.event!.time)
-        cell.displayResults(teamARes: upcomingEvent.event!.teamAScore, teamBRes: upcomingEvent.event!.teamBScore)
-        if(upcomingEvent.teamA != nil && upcomingEvent.teamB != nil){
-            cell.displayImgs(teamAURL: upcomingEvent.teamA!.imgURL!, teamBURL: upcomingEvent.teamB!.imgURL!)
+        let lastEvent: UpcomingModel = upcomingEvents[index]
+        cell.displayNames(teamA: lastEvent.event!.teamA!, teamB: lastEvent.event!.teamB!)
+        cell.displayDateTime(date: lastEvent.event!.date, time: lastEvent.event!.time)
+        cell.displayResults(teamARes: lastEvent.event!.teamAScore, teamBRes: lastEvent.event!.teamBScore)
+        
+        if(lastEvent.teamA != nil && lastEvent.teamB != nil){
+            cell.displayImgs(teamAURL: lastEvent.teamA!.imgURL!, teamBURL: lastEvent.teamB!.imgURL!)
+        }else if(lastEvent.teamA == nil && lastEvent.teamB != nil){
+            cell.displayImgs(teamAURL: nil, teamBURL: lastEvent.teamB!.imgURL!)
+        }else if(lastEvent.teamA != nil && lastEvent.teamB == nil){
+            cell.displayImgs(teamAURL: lastEvent.teamA!.imgURL!, teamBURL: nil)
+        }else{
+            cell.displayImgs(teamAURL: nil, teamBURL: nil)
         }
     }
     

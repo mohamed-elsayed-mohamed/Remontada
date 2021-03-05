@@ -12,4 +12,5 @@ protocol APIProtocol: class {
     func hideIndicator()
     func fetchingDataSuccess()
     func showError(error: String)
+    func showInternetMessage(message: String)
 }

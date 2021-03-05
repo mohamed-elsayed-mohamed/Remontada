@@ -6,18 +6,20 @@
 //
 
 import UIKit
+import SwiftSpinner
 
 class UpcomingEventsCell: UITableViewCell, APIProtocol {
     
     @IBOutlet weak var UpcomingEventsCollectionView: UICollectionView!
     private var presenter: UpcomingEventsPresenter!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
         setupMyCollectionView()
         
-        presenter = UpcomingEventsPresenter(upcommingView: self, leagueID: DetailsVC.leagueID!)
+        presenter = UpcomingEventsPresenter(upcommingView: self)
+        presenter.getEvents(leageID: DetailsVC.leagueID!)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,19 +27,21 @@ class UpcomingEventsCell: UITableViewCell, APIProtocol {
     }
     
     func showIndicator() {
-        
     }
     
     func hideIndicator() {
-        
     }
     
     func fetchingDataSuccess() {
-        UpcomingEventsCollectionView.reloadData()
+
+        self.UpcomingEventsCollectionView.reloadData()
     }
     
     func showError(error: String) {
         
+    }
+    
+    func showInternetMessage(message: String) {
     }
     
 }

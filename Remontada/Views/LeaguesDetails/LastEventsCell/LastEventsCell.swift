@@ -16,7 +16,8 @@ class LastEventsCell: UITableViewCell, APIProtocol {
         super.awakeFromNib()
         
         setupMyCollectionView()
-        presenter = LastEventsPresenter(upcommingView: self, leagueID: DetailsVC.leagueID!)
+        presenter = LastEventsPresenter(upcommingView: self)
+        presenter.getEvents(leageID: DetailsVC.leagueID!)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -24,7 +25,6 @@ class LastEventsCell: UITableViewCell, APIProtocol {
     }
     
     func showIndicator() {
-        
     }
     
     func hideIndicator() {
@@ -32,10 +32,14 @@ class LastEventsCell: UITableViewCell, APIProtocol {
     }
     
     func fetchingDataSuccess() {
-        lastEventsCollectionView.reloadData()
+        self.lastEventsCollectionView.reloadData()
     }
     
     func showError(error: String) {
+        
+    }
+    
+    func showInternetMessage(message: String) {
         
     }
 }

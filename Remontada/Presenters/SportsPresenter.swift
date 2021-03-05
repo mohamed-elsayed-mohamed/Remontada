@@ -16,11 +16,11 @@ class SportsPresenter: CollectionsProtocol {
     private var selectedSport: Sport?
     
     init(sportsView: APIProtocol) {
-        self.sportsView = sportsView    // Call: self.sportsView = self
-        getSports()
+        self.sportsView = sportsView
+        // getSports()
     }
     
-    private func getSports() {
+    func getSports() {
         sportsView?.showIndicator()
         dataAPISource.fetchData(url: APIURLs.sports, responseClass: SportsModel.self, completion: { (response) in
             switch response {
@@ -30,8 +30,13 @@ class SportsPresenter: CollectionsProtocol {
                 
                 self.sportsView?.fetchingDataSuccess()
                 self.sportsView?.hideIndicator()
-            case .failure:
-                self.sportsView?.showError(error: "Error While featching data")
+            case .failure(let error):
+                let errorMessage = error.userInfo[NSLocalizedDescriptionKey]! as! String
+                if error.code == -1 {
+                    self.sportsView?.showInternetMessage(message: errorMessage)
+                }else{
+                    self.sportsView?.showError(error: errorMessage)
+                }
             }
         })
     }

@@ -37,8 +37,8 @@
                                 <rect key="frame" x="57.5" y="5" width="20" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPI-FI-6JN">
-                                        <rect key="frame" x="7" y="4" width="6.5" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <rect key="frame" x="5.5" y="2" width="9" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -82,8 +82,8 @@
                                 <rect key="frame" x="7.5" y="5" width="20" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5P-8h-EjU">
-                                        <rect key="frame" x="7" y="4" width="6.5" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <rect key="frame" x="5.5" y="2" width="9" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -128,7 +128,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" red="0.78427186299999996" green="1" blue="1" alpha="0.77303733569999999" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" systemColor="systemGray5Color"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="2xQ-C2-Qwc" secondAttribute="trailing" id="3E2-56-cKO"/>
                 <constraint firstItem="2xQ-C2-Qwc" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="8d8-0r-teO"/>
@@ -165,6 +165,9 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

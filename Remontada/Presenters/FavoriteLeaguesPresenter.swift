@@ -46,13 +46,8 @@ class FavoriteLeaguesPresenter: CollectionsProtocol{
     func insertCell(cell: LeageCell, index: Int) {
         let favorite: FavoriteLeagues = favoriteLeages![index]
         cell.displayName(name: favorite.name!)
-        if(favorite.badgeURL != nil){
-            cell.displayImage(image: favorite.badgeURL!)
-        }
-        
-        if(favorite.youtubeURL != nil){
-            cell.setVideoID(youtubeVideoID: favorite.youtubeURL!)
-        }
+        cell.displayImage(image: favorite.badgeURL)
+        cell.setVideoID(youtubeVideoID: favorite.youtubeURL)
     }
     
 }

@@ -3,24 +3,28 @@ PODS:
   - SDWebImage (5.10.3):
     - SDWebImage/Core (= 5.10.3)
   - SDWebImage/Core (5.10.3)
+  - SwiftSpinner (2.2.0)
   - YouTubePlayer (0.7.2)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - SDWebImage (~> 5.0)
+  - SwiftSpinner
   - YouTubePlayer
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - SDWebImage
+    - SwiftSpinner
     - YouTubePlayer
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   SDWebImage: e378178472b735e84b007bfb55514c97948a0598
+  SwiftSpinner: f9b59477fe107427f2b5b835497d6636fa167ede
   YouTubePlayer: 2b5f2830d8f9b2cde942083211291e382c9e6bd5
 
-PODFILE CHECKSUM: f0abfc387e0c2e9642ecf3e5a6812ef8f29455fb
+PODFILE CHECKSUM: 6ec12c73d4f4e4f7c079f81899ec7eed70b69a22
 
 COCOAPODS: 1.10.1

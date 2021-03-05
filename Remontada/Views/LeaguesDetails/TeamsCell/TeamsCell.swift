@@ -38,6 +38,10 @@ class TeamsCell: UITableViewCell, APIProtocol {
     func showError(error: String) {
         
     }
+    
+    func showInternetMessage(message: String) {
+        
+    }
 }
 
 extension TeamsCell: UICollectionViewDelegate, UICollectionViewDataSource{

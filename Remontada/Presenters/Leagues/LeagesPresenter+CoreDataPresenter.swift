@@ -8,8 +8,6 @@
 import Foundation
 
 extension LeagesPresenter{
-    
-    
     func deleteByID(leagueID: String?) -> Int {
         self.dataModel!.deleteLeague(leagueID: leagueID!)
     }
@@ -23,7 +21,7 @@ extension LeagesPresenter{
     
     func addFavorite(index: Int) -> Int {
         
-        let res = self.dataModel!.addLeague(id: self.leages[index].info.ID!, name: self.leages[index].info.name!, badgeURL: self.leages[index].moreInfo.imageURL, youtubeURL: self.leages[index].moreInfo.youtube)
+        let res = self.dataModel!.addLeague(id: self.leages[index].info.ID!, name: self.leages[index].info.name!, badgeURL: self.leages[index].moreInfo.imageURL, youtubeURL: self.leages[index].youTubeID)
         
         return res
     }

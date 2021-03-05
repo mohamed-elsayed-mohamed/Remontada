@@ -22,9 +22,13 @@ class TeamCell: UICollectionViewCell, TeamCellProtocol {
     }
     
     func displayImg(imgURL: String?) {
+        self.layer.cornerRadius = self.frame.size.width/2
+        self.layer.borderWidth = 2
+        self.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0.30)
         if(imgURL != nil){
-            self.layer.cornerRadius = self.frame.size.width/2
             self.teamImg.sd_setBackgroundImage(with: URL(string: imgURL!), for: .normal)
+        }else{
+            self.teamImg.setBackgroundImage(UIImage(named: "teams.jpg"), for: .normal)
         }
     }
     
@@ -35,10 +39,21 @@ class TeamCell: UICollectionViewCell, TeamCellProtocol {
     func navigateToTeamsView() {
         let currentView: UIViewController = self.window!.rootViewController!
         
-        let teamDetailsView = currentView.storyboard!.instantiateViewController(withIdentifier: ViewsIDs.teamDetails) as! TeamDetailsVC
-        teamDetailsView.setTeamID(ID: teamID)
-        
-        currentView.dismiss(animated: false, completion: nil)
-        currentView.present(teamDetailsView, animated:true, completion: nil)
+        if(BaseAPI().isConnectedToInternet()){
+            let teamDetailsView = currentView.storyboard!.instantiateViewController(withIdentifier: ViewsIDs.teamDetails) as! TeamDetailsVC
+            teamDetailsView.setTeamID(ID: teamID)
+            
+            currentView.presentedViewController!.present(teamDetailsView, animated: true, completion: nil)
+        }else{
+            let actionsheet = UIAlertController(title: "No Internet Connection", message: "It seems that you are not connected with the internet please reconnect to get your team information", preferredStyle: .actionSheet)
+            
+            actionsheet.addAction(UIAlertAction(title: "Retray", style: .default, handler: {
+                action in
+                self.navigateToTeamsView()
+            }))
+            
+            actionsheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            currentView.presentedViewController!.present(actionsheet, animated: true, completion: nil)
+        }
     }
 }

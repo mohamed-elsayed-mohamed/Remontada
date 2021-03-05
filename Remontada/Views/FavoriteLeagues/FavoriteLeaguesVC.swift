@@ -18,6 +18,13 @@ class FavoriteLeaguesVC: UIViewController, CoreDataProtocol {
         presenter = FavoriteLeaguesPresenter(favoriteLeagesView: self)
         
         setupTableView()
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeLeft.direction = .right
+        self.view.addGestureRecognizer(swipeLeft)
+    }
+    
+    @objc func handleGesture(){
+        self.tabBarController?.selectedIndex = 0
     }
     
     override func viewWillAppear(_ animated: Bool) {

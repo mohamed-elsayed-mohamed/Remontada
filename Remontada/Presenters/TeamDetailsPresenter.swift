@@ -13,12 +13,11 @@ class TeamDetailsPresenter {
     private let dataAPISource = BaseAPI()
     private var team = Team()
     
-    init(teamDetailsView: APIProtocol, teamID: String) {
+    init(teamDetailsView: APIProtocol) {
         self.teamDetailsView = teamDetailsView
-        getTeamData(teamID: teamID)
     }
     
-    private func getTeamData(teamID: String) {
+    func getTeamData(teamID: String) {
         self.teamDetailsView?.showIndicator()
         dataAPISource.fetchData(url: APIURLs.teamByID + teamID, responseClass: TeamsModel.self, completion: { (response) in
             switch response {
@@ -27,8 +26,13 @@ class TeamDetailsPresenter {
                 self.team = teams.teams[0]!
                 self.teamDetailsView?.hideIndicator()
                 self.teamDetailsView?.fetchingDataSuccess()
-            case .failure:
-                self.teamDetailsView?.showError(error: "Error")
+            case .failure(let error):
+                let errorMessage = error.userInfo[NSLocalizedDescriptionKey]! as! String
+                if error.code == -1 {
+                    self.teamDetailsView?.showInternetMessage(message: errorMessage)
+                }else{
+                    self.teamDetailsView?.showError(error: errorMessage)
+                }
             }
         })
     }

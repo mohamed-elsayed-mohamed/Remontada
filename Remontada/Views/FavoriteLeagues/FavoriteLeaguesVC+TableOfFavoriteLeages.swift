@@ -30,12 +30,30 @@ extension FavoriteLeaguesVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.presenter.selectCell(index: indexPath.row)
-        let detailsVC = self.storyboard!.instantiateViewController(withIdentifier: ViewsIDs.leagueDetails) as! DetailsVC
-        
-        DetailsVC.leagueID = self.presenter.getLeagueID(index: indexPath.row)
-        let navController = UINavigationController(rootViewController: detailsVC)
-        self.present(navController, animated:true, completion: nil)
+        self.navigateToLeagueDetails(index: indexPath.row)
     }
+    
+    private func navigateToLeagueDetails(index: Int){
+        if(BaseAPI().isConnectedToInternet()){
+            self.presenter.selectCell(index: index)
+            let detailsVC = self.storyboard!.instantiateViewController(withIdentifier: ViewsIDs.leagueDetails) as! DetailsVC
+            
+            DetailsVC.leagueID = self.presenter.getLeagueID(index: index)
+            let navController = UINavigationController(rootViewController: detailsVC)
+            self.present(navController, animated:true, completion: nil)
+        }else{
+            let actionsheet = UIAlertController(title: "Can not load leage data!", message: "It seems that you are not connected with the internet please reconnect and try again!", preferredStyle: .actionSheet)
+            
+            actionsheet.addAction(UIAlertAction(title: "Retray", style: .default, handler: {
+                action in
+                self.navigateToLeagueDetails(index: index)
+            }))
+            
+            actionsheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
+            present(actionsheet, animated: true, completion: nil)
+        }
+    }
+
     
 }

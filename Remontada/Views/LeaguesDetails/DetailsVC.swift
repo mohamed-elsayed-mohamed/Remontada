@@ -32,6 +32,12 @@ class DetailsVC: UIViewController {
             }
         }
         
+        let tapToClose = UITapGestureRecognizer(target: self, action: #selector(self.dismiss(animated: completion:)))
+        
+        tapToClose.numberOfTapsRequired = 2
+        
+        self.view.addGestureRecognizer(tapToClose)
+        
         setupMyTableView()
     }
     
@@ -39,12 +45,9 @@ class DetailsVC: UIViewController {
         var imageName: String = "heart.fill"
         if(isFavorite!){
             imageName = "heart"
-            
-            let res = self.leaguesPresenter?.deleteByID(leagueID: DetailsVC.leagueID!)
-            print("Delete Res: \(res!)")
+            let _ = self.leaguesPresenter?.deleteByID(leagueID: DetailsVC.leagueID!)
         }else{
-            let res = self.leaguesPresenter?.addFavorite(index: leagueIndex!)
-            print("Adding Res: \(res!)")
+            let _ = self.leaguesPresenter?.addFavorite(index: leagueIndex!)
         }
         
         isFavorite = !isFavorite!

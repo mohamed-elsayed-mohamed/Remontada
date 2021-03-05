@@ -9,5 +9,5 @@ import UIKit
 
 protocol SportCellProtocol {
     func displayName(name: String)
-    func displayImage(image: String)
+    func displayImage(image: String?)
 }

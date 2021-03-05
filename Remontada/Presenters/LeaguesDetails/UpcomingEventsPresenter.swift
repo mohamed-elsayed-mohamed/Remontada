@@ -14,12 +14,11 @@ class UpcomingEventsPresenter: CollectionsProtocol {
     private var upcomingEvents = [UpcomingModel]()
     
     
-    init(upcommingView: APIProtocol, leagueID: String) {
+    init(upcommingView: APIProtocol) {
         self.upcommingView = upcommingView
-        getEvents(leageID: leagueID)
     }
     
-    private func getEvents(leageID: String) {
+    func getEvents(leageID: String) {
         upcommingView?.showIndicator()
         dataAPISource.fetchData(url: APIURLs.eventsByLeagueID + leageID, responseClass: Events.self, completion: { (response) in
             switch response {
@@ -33,8 +32,13 @@ class UpcomingEventsPresenter: CollectionsProtocol {
                 }
                 
                 self.getTeamsInfo()
-            case .failure:
-                self.upcommingView?.showError(error: "Error While featching base info data")
+            case .failure(let error):
+                let errorMessage = error.userInfo[NSLocalizedDescriptionKey]! as! String
+                if error.code == -1 {
+                    self.upcommingView?.showInternetMessage(message: errorMessage)
+                }else{
+                    self.upcommingView?.showError(error: errorMessage)
+                }
             }
         })
     }
@@ -67,9 +71,13 @@ class UpcomingEventsPresenter: CollectionsProtocol {
                             self.upcommingView?.hideIndicator()
                             self.upcommingView?.fetchingDataSuccess()
                         }
-                    case .failure:
-                        self.upcommingView?.showError(error: "Error While featching base info data")
-                    }
+                    case .failure(let error):
+                        let errorMessage = error.userInfo[NSLocalizedDescriptionKey]! as! String
+                        if error.code == -1 {
+                            self.upcommingView?.showInternetMessage(message: errorMessage)
+                        }else{
+                            self.upcommingView?.showError(error: errorMessage)
+                        }                    }
                 })
             }
         }
@@ -86,9 +94,15 @@ class UpcomingEventsPresenter: CollectionsProtocol {
         let upcomingEvent: UpcomingModel = upcomingEvents[index]
         cell.displayNames(teamA: upcomingEvent.event!.teamA!, teamB: upcomingEvent.event!.teamB!)
         cell.displayDateTime(date: upcomingEvent.event!.date, time: upcomingEvent.event!.time)
-        //cell.displayResults(teamARes: upcomingEvent.event!.teamAScore, teamBRes: upcomingEvent.event!.teamBScore)
+        
         if(upcomingEvent.teamA != nil && upcomingEvent.teamB != nil){
             cell.displayImgs(teamAURL: upcomingEvent.teamA!.imgURL!, teamBURL: upcomingEvent.teamB!.imgURL!)
+        }else if(upcomingEvent.teamA == nil && upcomingEvent.teamB != nil){
+            cell.displayImgs(teamAURL: nil, teamBURL: upcomingEvent.teamB!.imgURL!)
+        }else if(upcomingEvent.teamA != nil && upcomingEvent.teamB == nil){
+            cell.displayImgs(teamAURL: upcomingEvent.teamA!.imgURL!, teamBURL: nil)
+        }else{
+            cell.displayImgs(teamAURL: nil, teamBURL: nil)
         }
     }
     

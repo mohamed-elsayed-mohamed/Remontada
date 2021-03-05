@@ -18,6 +18,11 @@ class YoutubeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         youtubePlayer.loadVideoID(self.videoID!)
+        let tapToClose = UITapGestureRecognizer(target: self, action: #selector(self.dismiss(animated: completion:)))
+        
+        tapToClose.numberOfTapsRequired = 2
+        
+        self.view.addGestureRecognizer(tapToClose)
     }
     
     func setVideoID(videoID: String) {
