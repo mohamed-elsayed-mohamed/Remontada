@@ -16,7 +16,8 @@ class BaseAPI {
             return completion(.failure(NSError(domain: url, code: -1, userInfo: [NSLocalizedDescriptionKey: "No Internet Connection"])))
         }
         
-        AF.request(url, method: .get, parameters: [:], headers: [:]).responseJSON { (response) in
+        AF.request(url, method: .get, parameters: [:], headers: [:]).responseJSON {
+            (response) in
             guard let statusCode = response.response?.statusCode else { return }
             
             if statusCode == 200 {

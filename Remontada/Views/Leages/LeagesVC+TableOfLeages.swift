@@ -55,7 +55,7 @@ extension LeagesVC: UITableViewDataSource{
             let detailsVC = self.storyboard!.instantiateViewController(withIdentifier: ViewsIDs.leagueDetails) as! DetailsVC
             
             DetailsVC.leagueID = self.presenter.getLeagueID(index: index)
-            detailsVC.setPresenter_Index(presenter: self.presenter, index: index)
+            detailsVC.setPresenter_Index(presenter: self.presenter, index: index, leagueName: self.presenter.getLeagueName(index: index))
             let navController = UINavigationController(rootViewController: detailsVC)
             self.present(navController, animated:true, completion: nil)
         }else{

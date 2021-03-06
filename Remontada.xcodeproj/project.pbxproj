@@ -32,6 +32,7 @@
 		8C5D10A725E5C5480023EE5A /* Remontada.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C5D10A525E5C5480023EE5A /* Remontada.xcdatamodeld */; };
 		8C5D10A925E5C5490023EE5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C5D10A825E5C5490023EE5A /* Assets.xcassets */; };
 		8C5D10AC25E5C5490023EE5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5D10AA25E5C5490023EE5A /* LaunchScreen.storyboard */; };
+		8C645B1325F2EB8A0014DB6B /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C645B1225F2EB8A0014DB6B /* ball.png */; };
 		8C7C095125E9A18F003D507C /* YoutubeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C095025E9A18F003D507C /* YoutubeVC.swift */; };
 		8C7D1E2825E85F1400CE2876 /* APIURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D1E2725E85F1400CE2876 /* APIURLs.swift */; };
 		8C7D1E2D25E8626900CE2876 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D1E2C25E8626900CE2876 /* BaseAPI.swift */; };
@@ -112,6 +113,7 @@
 		8C5D10A825E5C5490023EE5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C5D10AB25E5C5490023EE5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C5D10AD25E5C5490023EE5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C645B1225F2EB8A0014DB6B /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 		8C7C095025E9A18F003D507C /* YoutubeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVC.swift; sourceTree = "<group>"; };
 		8C7D1E2725E85F1400CE2876 /* APIURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIURLs.swift; sourceTree = "<group>"; };
 		8C7D1E2C25E8626900CE2876 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 		8C4E9B2225F1D4630016C08A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8C645B1225F2EB8A0014DB6B /* ball.png */,
 				8C4E9B2D25F20AC90016C08A /* facebook.png */,
 				8C4E9B2F25F20AC90016C08A /* instagram.png */,
 				8C4E9B2E25F20AC90016C08A /* twitter.png */,
@@ -631,6 +634,7 @@
 			files = (
 				8C4E9B2725F1D5D70016C08A /* leagues.png in Resources */,
 				8C952CB325E91E7700EFD939 /* LeageCell.xib in Resources */,
+				8C645B1325F2EB8A0014DB6B /* ball.png in Resources */,
 				8C4E9B3425F20AC90016C08A /* youtube.png in Resources */,
 				8C5D10AC25E5C5490023EE5A /* LaunchScreen.storyboard in Resources */,
 				8C4E9B3125F20AC90016C08A /* facebook.png in Resources */,

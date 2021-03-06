@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.4.1)
+  - Gemini (1.4.0)
   - SDWebImage (5.10.3):
     - SDWebImage/Core (= 5.10.3)
   - SDWebImage/Core (5.10.3)
@@ -8,6 +9,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - Gemini
   - SDWebImage (~> 5.0)
   - SwiftSpinner
   - YouTubePlayer
@@ -15,16 +17,18 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Gemini
     - SDWebImage
     - SwiftSpinner
     - YouTubePlayer
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Gemini: 4ad915cca8805577fe3021e02feeca2b77dcdbfc
   SDWebImage: e378178472b735e84b007bfb55514c97948a0598
   SwiftSpinner: f9b59477fe107427f2b5b835497d6636fa167ede
   YouTubePlayer: 2b5f2830d8f9b2cde942083211291e382c9e6bd5
 
-PODFILE CHECKSUM: 6ec12c73d4f4e4f7c079f81899ec7eed70b69a22
+PODFILE CHECKSUM: 56ab2d2d4639901b47455d66803df970ee42a358
 
 COCOAPODS: 1.10.1

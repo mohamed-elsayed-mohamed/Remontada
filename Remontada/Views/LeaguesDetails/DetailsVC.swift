@@ -11,14 +11,18 @@ class DetailsVC: UIViewController {
     
     @IBOutlet weak var favoritebtn: UIButton!
     @IBOutlet weak var detailsTableView: UITableView!
+    @IBOutlet weak var lblLeagueName: UILabel!
     
     private var isFavorite: Bool?
     public static var leagueID: String?
     private var leaguesPresenter: LeagesPresenter?
     private var leagueIndex: Int?
+    private var leagueName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lblLeagueName.text = leagueName
         
         if(leaguesPresenter == nil){
             self.favoritebtn.isHidden = true
@@ -55,9 +59,10 @@ class DetailsVC: UIViewController {
         favoritebtn.setBackgroundImage(UIImage(systemName: imageName), for: .normal)
     }
     
-    func setPresenter_Index(presenter: LeagesPresenter, index: Int) {
+    func setPresenter_Index(presenter: LeagesPresenter, index: Int, leagueName: String?) {
         self.leaguesPresenter = presenter
         self.leagueIndex = index
+        self.leagueName = leagueName
     }
     
 }

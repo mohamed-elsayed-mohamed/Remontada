@@ -128,4 +128,8 @@ class LeagesPresenter: CollectionsProtocol {
     func getLeagueID(index: Int) -> String{
         return leages[index].info.ID!
     }
+    
+    func getLeagueName(index: Int) -> String {
+        return leages[index].info.name!
+    }
 }

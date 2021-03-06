@@ -23,6 +23,14 @@ class LeagesVC: UIViewController, APIProtocol{
         setupTableView()
         presenter = LeagesPresenter(leagesView: self)
         self.lblLeagueName.text = self.sportName
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(gotoFavorite))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
+    }
+    
+    @objc func gotoFavorite(){
+        self.tabBarController?.selectedIndex = 1
     }
     
     override func viewWillAppear(_ animated: Bool) {

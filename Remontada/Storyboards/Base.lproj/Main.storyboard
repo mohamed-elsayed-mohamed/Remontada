@@ -98,6 +98,7 @@
                     <connections>
                         <outlet property="detailsTableView" destination="88c-GL-miZ" id="lCc-BP-Sjc"/>
                         <outlet property="favoritebtn" destination="Vek-dA-Uuc" id="T4j-8a-ox5"/>
+                        <outlet property="lblLeagueName" destination="Yeh-FO-1ec" id="iIK-FI-p8K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fbk-Fo-K93" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
